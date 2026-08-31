@@ -44,16 +44,16 @@ ul {
   line-height: 1.6;
 }
 
-button {
+.boton-enlace {
   background-color: #3498db;
   color: white;
-  border: none;
+  text-decoration: none; 
   padding: 8px 15px;
   border-radius: 4px;
-  cursor: pointer;
+  display: inline-block;
   margin-top: 10px;
 }
 
-button:hover {
+.boton-enlace:hover {
   background-color: #2980b9;
 }
