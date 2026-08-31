@@ -1,14 +1,27 @@
-console.log("Hello World Rick and Morty");
-
-
 async function obtenerPersonajes() {
-  try {
     const response = await fetch("https://rickandmortyapi.com/api/character");
     const data = await response.json();
-    console.log ("Personajes obtenidos:", data.results);
     return data.results;
-  } catch (error) {
-    console.error("Error al obtener los personajes:", error);
-    return []; 
-  }
 }
+
+function pintarPersonajes(personajes) {
+    let tarjetasHTML = "";
+    
+    personajes.forEach(personaje => {
+        tarjetasHTML += `
+        <div class="card">
+            <img src="${personaje.image}" alt="${personaje.name}">
+            
+            <!-- Agregamos este div para aplicar el padding de tu CSS -->
+            <div class="card-info">
+                <h3>${personaje.name}</h3>
+                <p class="species">${personaje.species}</p>
+            </div>
+        </div>
+        `;
+    });
+    
+    document.getElementById("main-container").innerHTML = tarjetasHTML;
+}
+
+obtenerPersonajes().then(pintarPersonajes);
