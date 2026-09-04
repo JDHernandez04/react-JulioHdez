@@ -61,3 +61,25 @@ ul {
 .boton-enlace:hover {
   background-color: #2980b9;
 }
+
+.tarjeta-azul {
+  display: inline-block;
+  background-color: #3498db; /* Azul característico */
+  color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px; /* Bordes más redondeados para estilo tarjeta */
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1 1 calc(33.333% - 12px); /* Tres tarjetas por fila en escritorio */
+  text-align: center;
+  min-width: 180px; /* Evita que se aplasten en móviles */
+}
+
+.tarjeta-azul:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px); /* Ligero salto al pasar el ratón */
+  color: #ffffff;
+}
